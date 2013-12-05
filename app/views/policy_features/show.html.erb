@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @policy_feature.vehicle %>
+</p>
+
+<p>
+  <strong>Policy excess:</strong>
+  <%= @policy_feature.policy_excess %>
+</p>
+
+<p>
+  <strong>Breakdown cover:</strong>
+  <%= @policy_feature.breakdown_cover %>
+</p>
+
+<p>
+  <strong>Windscreen repair:</strong>
+  <%= @policy_feature.windscreen_repair %>
+</p>
+
+<p>
+  <strong>Windscreen excess:</strong>
+  <%= @policy_feature.windscreen_excess %>
+</p>
+
+<%= link_to 'Edit', edit_policy_feature_path(@policy_feature) %> |
+<%= link_to 'Back', policy_features_path %>

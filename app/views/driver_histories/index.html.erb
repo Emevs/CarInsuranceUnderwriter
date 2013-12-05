@@ -1,0 +1,29 @@
+<h1>Listing driver_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Person id</th>
+      <th>Number of incidents</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @driver_histories.each do |driver_history| %>
+      <tr>
+        <td><%= driver_history.person_id %></td>
+        <td><%= driver_history.number_of_incidents %></td>
+        <td><%= link_to 'Show', driver_history %></td>
+        <td><%= link_to 'Edit', edit_driver_history_path(driver_history) %></td>
+        <td><%= link_to 'Destroy', driver_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Driver history', new_driver_history_path %>

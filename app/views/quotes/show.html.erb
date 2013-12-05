@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @quote.vehicle %>
+</p>
+
+<p>
+  <strong>Quote reference:</strong>
+  <%= @quote.quote_reference %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @quote.amount %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vehicle_id: 1
+  policy_excess: 200
+  breakdown_cover: European
+  windscreen_repair: N
+  windscreen_excess: 
+
+two:
+  vehicle_id: 2
+  policy_excess: 0
+  breakdown_cover: Roadside
+  windscreen_repair: Y
+  windscreen_excess: 

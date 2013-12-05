@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Person id</strong>
+  <%=@driver_history.person_id %>
+</p>
+<p>
+  <strong>Number of incidents:</strong>
+  <%= @driver_history.number_of_incidents %>
+</p>
+
+<%= link_to 'Edit', edit_driver_history_path(@driver_history) %> |
+<%= link_to 'Back', driver_histories_path %>

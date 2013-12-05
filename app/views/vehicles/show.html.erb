@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Person id</strong>
+  <%=@vehicle.person_id %>
+</p>
+<p>
+  <strong>Vehicle registration:</strong>
+  <%= @vehicle.vehicle_registration %>
+</p>
+
+<p>
+  <strong>Annual mileage:</strong>
+  <%= @vehicle.annual_mileage %>
+</p>
+
+<p>
+  <strong>Estimated value:</strong>
+  <%= @vehicle.estimated_value %>
+</p>
+
+<p>
+  <strong>Parking location:</strong>
+  <%= @vehicle.parking_location %>
+</p>
+
+<p>
+  <strong>Policy start date:</strong>
+  <%= @vehicle.policy_start_date %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

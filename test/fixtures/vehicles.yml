@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vehicle_registration: MyString
+  annual_mileage: 10000
+  estimated_value: 3000
+  parking_location: Driveway
+  policy_start_date: 2013-11-12
+  person_id: 1
+
+two:
+  vehicle_registration: MyString1
+  annual_mileage: 20000
+  estimated_value: 5000
+  parking_location: Garage
+  policy_start_date: 2013-11-12
+  person_id: 2

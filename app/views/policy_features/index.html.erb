@@ -1,0 +1,35 @@
+<h1>Listing policy_features</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vehicle</th>
+      <th>Policy excess</th>
+      <th>Breakdown cover</th>
+      <th>Windscreen repair</th>
+      <th>Windscreen excess</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @policy_features.each do |policy_feature| %>
+      <tr>
+        <td><%= policy_feature.vehicle %></td>
+        <td><%= policy_feature.policy_excess %></td>
+        <td><%= policy_feature.breakdown_cover %></td>
+        <td><%= policy_feature.windscreen_repair %></td>
+        <td><%= policy_feature.windscreen_excess %></td>
+        <td><%= link_to 'Show', policy_feature %></td>
+        <td><%= link_to 'Edit', edit_policy_feature_path(policy_feature) %></td>
+        <td><%= link_to 'Destroy', policy_feature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Policy feature', new_policy_feature_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  driver_history_id: 1
+  date_of_incident: 2013-11-13
+  claim_value: 1
+  incident_type: MyString
+  description: MyString
+
+two:
+  driver_history_id: 2
+  date_of_incident: 2013-11-13
+  claim_value: 1
+  incident_type: MyString
+  description: MyString

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vehicle_id: 1
+  quote_reference: MyString
+  amount: 200
+
+two:
+  vehicle_id: 2
+  quote_reference: Test
+  amount: 1

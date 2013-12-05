@@ -1,0 +1,37 @@
+<%= form_for(@policy_feature) do |f| %>
+  <% if @policy_feature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@policy_feature.errors.count, "error") %> prohibited this policy_feature from being saved:</h2>
+
+      <ul>
+      <% @policy_feature.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vehicle %><br>
+    <%= f.text_field :vehicle %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_excess %><br>
+    <%= f.text_field :policy_excess %>
+  </div>
+  <div class="field">
+    <%= f.label :breakdown_cover %><br>
+    <%= f.text_field :breakdown_cover %>
+  </div>
+  <div class="field">
+    <%= f.label :windscreen_repair %><br>
+    <%= f.text_field :windscreen_repair %>
+  </div>
+  <div class="field">
+    <%= f.label :windscreen_excess %><br>
+    <%= f.text_field :windscreen_excess %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

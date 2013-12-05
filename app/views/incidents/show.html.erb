@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Driver history:</strong>
+  <%= @incident.driver_history_id %>
+</p>
+
+<p>
+  <strong>Date of incident:</strong>
+  <%= @incident.date_of_incident %>
+</p>
+
+<p>
+  <strong>Claim value:</strong>
+  <%= @incident.claim_value %>
+</p>
+
+<p>
+  <strong>Incident type:</strong>
+  <%= @incident.incident_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @incident.description %>
+</p>
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

@@ -26,10 +26,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.password == params[:password]
+    @user.uuid = SecureRandom.uuid
 
     respond_to do |format|
       if @user.save
-        format.json { render action: 'show', status: :created, location: @user }
+        format.json { render json: :uuid, action: 'show', status: :created, location: @user}
       else
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -60,7 +61,7 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by_email(params[:email])
     if @user.password == params[:password]
-      give_token
+      #give_token
     else
       #return json
     end

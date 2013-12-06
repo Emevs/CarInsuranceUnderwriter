@@ -1,17 +1,17 @@
-require 'bcrypt'
+# require 'bcrypt'
 class User < ActiveRecord::Base
-  include 'bcrypt'
-  has_one :person, :dependent => destroy
+  has_one :personal_detail, :dependent => :destroy
+  has_one :address, :dependent => :destroy
+  has_one :vehicle, :dependent => :destroy
+  has_one :driver_history, :dependent => :destroy
 
-  # Method from http://bcrypt-ruby.rubyforge.org/
-  def password
-    @password ||= Password.new(password_hash)
-  end
-
-  # Method from http://bcrypt-ruby.rubyforge.org/
-  def password=(new_password)
-    @password = Password.create(new_password)
-    self.password_hash = @password
+  validates_uniqueness_of(:username, :uuid)
+  def self.authenticate(username, password)
+    user = self.find_by_username(username)
+    if user.password != password
+      user = nil
+    end
+    user.uuid
   end
 
 end

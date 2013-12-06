@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205154831) do
+ActiveRecord::Schema.define(version: 20131206164548) do
 
   create_table "addresses", force: true do |t|
-    t.integer  "person_id"
+    t.integer  "user_id"
     t.string   "house_name_or_number", null: false
     t.string   "street_name",          null: false
     t.string   "county",               null: false
@@ -24,16 +24,16 @@ ActiveRecord::Schema.define(version: 20131205154831) do
     t.datetime "updated_at"
   end
 
-  add_index "addresses", ["person_id"], name: "index_addresses_on_person_id"
+  add_index "addresses", ["user_id"], name: "index_addresses_on_user_id"
 
   create_table "driver_histories", force: true do |t|
-    t.integer  "person_id"
+    t.integer  "user_id"
     t.integer  "number_of_incidents", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "driver_histories", ["person_id"], name: "index_driver_histories_on_person_id"
+  add_index "driver_histories", ["user_id"], name: "index_driver_histories_on_user_id"
 
   create_table "incidents", force: true do |t|
     t.integer  "driver_history_id"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20131205154831) do
 
   add_index "incidents", ["driver_history_id"], name: "index_incidents_on_driver_history_id"
 
-  create_table "people", force: true do |t|
+  create_table "personal_details", force: true do |t|
     t.string   "title"
     t.string   "forenames"
     t.string   "surname"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20131205154831) do
     t.datetime "updated_at"
   end
 
-  add_index "people", ["user_id"], name: "index_people_on_user_id"
+  add_index "personal_details", ["user_id"], name: "index_personal_details_on_user_id"
 
   create_table "policy_features", force: true do |t|
     t.integer  "vehicle_id"
@@ -88,13 +88,14 @@ ActiveRecord::Schema.define(version: 20131205154831) do
 
   create_table "users", force: true do |t|
     t.string   "uuid"
+    t.string   "username"
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "vehicles", force: true do |t|
-    t.integer  "person_id"
+    t.integer  "user_id"
     t.string   "vehicle_registration", null: false
     t.integer  "annual_mileage",       null: false
     t.integer  "estimated_value",      null: false

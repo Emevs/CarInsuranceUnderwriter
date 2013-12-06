@@ -20,7 +20,7 @@
   </thead>
 
   <tbody>
-    <% @people.each do |person| %>
+    <% @personal_details.each do |person| %>
       <tr>
         <td><%= person.title %></td>
         <td><%= person.forenames %></td>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>
+<%= link_to 'New PersonalDetails', new_person_path %>

@@ -1,11 +1,10 @@
-class Person < ActiveRecord::Base
-  has_one :address, :dependent => :destroy
+class PersonalDetail < ActiveRecord::Base
   belongs_to :user
   # Constants for validation
   LICENSE_TYPES = ['full', 'provisional']
 
   # Force the user to enter certain details.
-  validates_presence_of(:forenames, :surname, :date_of_birth, :email, :title, :license_type, :license_period, :telephone_number, :occupation)
+  validates_presence_of(:forenames, :surname, :date_of_birth, :email, :title, :license_type, :license_period, :telephone_number, :occupation, :user_id)
 
   # Check format of email address is valid.
   validates_format_of(:email,

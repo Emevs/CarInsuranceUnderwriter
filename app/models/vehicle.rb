@@ -1,5 +1,5 @@
 class Vehicle < ActiveRecord::Base
-  belongs_to :person
+  belongs_to :personal_details
 
   PARKING_LOCATIONS = ['Garage', 'Driveway', 'Street', 'Secure Car park', 'Insecure Car Park']
   validates_presence_of :vehicle_registration, :annual_mileage, :estimated_value, :parking_location, :policy_start_date, :person_id

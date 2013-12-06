@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Person</th>
+      <th>User</th>
       <th>House name or number</th>
       <th>Street name</th>
       <th>County</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @addresses.each do |address| %>
       <tr>
-        <td><%= address.personal_details %></td>
+        <td><%= address.user_id %></td>
         <td><%= address.house_name_or_number %></td>
         <td><%= address.street_name %></td>
         <td><%= address.county %></td>

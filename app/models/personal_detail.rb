@@ -1,5 +1,7 @@
 class PersonalDetail < ActiveRecord::Base
   belongs_to :user
+
+
   # Constants for validation
   LICENSE_TYPES = ['full', 'provisional']
 
@@ -12,7 +14,7 @@ class PersonalDetail < ActiveRecord::Base
                       :message => 'format is incorrect.')
 
   # Check email address is unique.
-  validates_uniqueness_of(:email)
+  validates_uniqueness_of(:email, :user_id)
 
   validates_numericality_of(:license_period,
                             :greater_than_or_equal_to => 0,

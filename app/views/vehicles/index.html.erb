@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Person id</th>
+      <th>User id</th>
       <th>Vehicle registration</th>
       <th>Annual milage</th>
       <th>Estimated value</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @vehicles.each do |vehicle| %>
       <tr>
-        <td><%= vehicle.person_id %></td>
+        <td><%= vehicle.user_id %></td>
         <td><%= vehicle.vehicle_registration %></td>
         <td><%= vehicle.annual_mileage %></td>
         <td><%= vehicle.estimated_value %></td>

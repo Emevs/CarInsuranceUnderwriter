@@ -1,36 +1,37 @@
 class PersonalDetailsController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
-  # GET /PersonalDetails
-  # GET /PersonalDetails.json
+  # GET /personal_details
+  # GET /personal_details.json
   def index
     @personal_detail = PersonalDetail.all
   end
 
-  # GET /PersonalDetails/1
-  # GET /PersonalDetails/1.json
+  # GET /personal_details/1
+  # GET /personal_details/1.json
   def show
   end
 
-  # GET /PersonalDetails/new
+  # GET /personal_details/new
   def new
     @personal_detail = PersonalDetail.new
   end
 
-  # GET /PersonalDetails/1/edit
+  # GET /personal_details/1/edit
   def edit
   end
 
-  # POST /PersonalDetails
-  # POST /PersonalDetails.json
+  # POST /personal_details
+  # POST /personal_details.json
   def create
     @personal_detail = PersonalDetail.new(personal_detail_params)
     #@personal_detail.user_id = User.find_by(:uuid, personal_detail_params[:uuid]).user_id
-    @personal_detail.user_id = User.find_by(:uuid, params[:uuid]).user_id
+    @user = User.find_by uuid: params[:uuid]
+    @personal_detail.user_id = @user.id
     respond_to do |format|
       if @personal_detail.save
-        #format.html { redirect_to @personal_details, notice: 'PersonalDetails was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @personal_detail }
+
+        format.json {render action: 'show', status: :created, location: @personal_detail }
       else
         #format.html { render action: 'new' }
         format.json { render json: @personal_detail.errors, status: :unprocessable_entity }
@@ -38,12 +39,12 @@ class PersonalDetailsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /PersonalDetails/1
-  # PATCH/PUT /PersonalDetails/1.json
+  # PATCH/PUT /personal_details/1
+  # PATCH/PUT /personal_details/1.json
   def update
     respond_to do |format|
       if @personal_detail.update(personal_detail_params, params[:uuid])
-        #format.html { redirect_to @personal_detail, notice: 'PersonalDetails was successfully updated.' }
+        #format.html { redirect_to @personal_detail, notice: 'personal_details was successfully updated.' }
         format.json { head :no_content }
       else
         #format.html { render action: 'edit' }
@@ -52,8 +53,8 @@ class PersonalDetailsController < ApplicationController
     end
   end
 
-  # DELETE /PersonalDetails/1
-  # DELETE /PersonalDetails/1.json
+  # DELETE /personal_details/1
+  # DELETE /personal_details/1.json
   def destroy
     @personal_detail.destroy(params[:uuid])
     respond_to do |format|

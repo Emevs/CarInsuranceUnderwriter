@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Person id</th>
+      <th>User id</th>
       <th>Number of incidents</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @driver_histories.each do |driver_history| %>
       <tr>
-        <td><%= driver_history.person_id %></td>
+        <td><%= driver_history.user_id %></td>
         <td><%= driver_history.number_of_incidents %></td>
         <td><%= link_to 'Show', driver_history %></td>
         <td><%= link_to 'Edit', edit_driver_history_path(driver_history) %></td>

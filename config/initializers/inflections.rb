@@ -6,7 +6,7 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
-#   inflect.irregular 'personal_details', 'PersonalDetails'
+#   inflect.irregular 'personal_details', 'personal_details'
 #   inflect.uncountable %w( fish sheep )
 # end
 

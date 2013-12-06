@@ -1,10 +1,10 @@
-<%= form_for(@personal_details) do |f| %>
-  <% if @personal_details.errors.any? %>
+<%= form_for(@personal_detail) do |f| %>
+  <% if @personal_detail.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@personal_details.errors.count, "error") %> prohibited this person from being saved:</h2>
+      <h2><%= pluralize(@personal_detail.errors.count, "error") %> prohibited this person from being saved:</h2>
 
       <ul>
-      <% @personal_details.errors.full_messages.each do |msg| %>
+      <% @personal_detail.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -48,8 +48,8 @@
     <%= f.text_field :occupation %>
   </div>
   <div class="field">
-    <%= f.label :references %><br>
-    <%= f.text_field :references %>
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

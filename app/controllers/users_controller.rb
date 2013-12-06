@@ -1,3 +1,4 @@
+require 'bcrypt'
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -25,11 +26,12 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @user.password = BCrypt::Password.create(params[:password], :cost =>5)
     @user.uuid = SecureRandom.uuid
 
     respond_to do |format|
       if @user.save
-        format.json { render json: :uuid, action: 'show', status: :created, location: @user}
+        format.json {render action: 'show', status: :created, location: @user}
       else
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end

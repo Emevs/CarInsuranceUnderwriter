@@ -1,0 +1,45 @@
+<h1>Listing personal details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Forenames</th>
+      <th>Surname</th>
+      <th>Email</th>
+      <th>Date of birth</th>
+      <th>Telephone number</th>
+      <th>License type</th>
+      <th>License period</th>
+      <th>Occupation</th>
+      <th>References</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personal_details.each do |personal_detail| %>
+      <tr>
+        <td><%= personal_detail.title %></td>
+        <td><%= personal_detail.forenames %></td>
+        <td><%= personal_detail.surname %></td>
+        <td><%= personal_detail.email %></td>
+        <td><%= personal_detail.date_of_birth %></td>
+        <td><%= personal_detail.telephone_number %></td>
+        <td><%= personal_detail.license_type %></td>
+        <td><%= personal_detail.license_period %></td>
+        <td><%= personal_detail.occupation %></td>
+        <td><%= personal_detail.references %></td>
+        <td><%= link_to 'Show', personal_detail %></td>
+        <td><%= link_to 'Edit', edit_personal_detail_path(personal_detail) %></td>
+        <td><%= link_to 'Destroy', personal_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New personal_details', new_personal_detail_path %>

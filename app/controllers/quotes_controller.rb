@@ -10,11 +10,29 @@ class QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+    @quote = Quote.find_by quote_reference: params[:quote_reference]
+    @vehicle = Vehicle.find_by id: @quote.vehicle_id
+    @policy_feature = PolicyFeature.find_by vehicle_id: @vehicle.id
+
+    respond_to do |format|
+      format.json { render action: 'show', status: :created, location: @quote }
+    end
   end
 
   # GET /quotes/new
   def new
-    @quote = Quote.new
+    @quote = Quote.new(quote_params)
+    @user = User.find_by uuid: params[:uuid]
+    @vehicle = Vehicle.find_by user_id: @user.id
+    @quote.vehicle_id = @vehicle.id
+    @policy_feature = PolicyFeature.find_by vehicle_id: @vehicle.id
+
+    @quote.amount = Random.rand(2000-100)
+    @quote.quote_reference = "Quoteref-"+@user.id.to_s+"-"+@vehicle.id.to_s+"-"+Date.today.to_s+"-"+Random.rand(100-1).to_s
+
+    respond_to do |format|
+      format.json { render action: 'show', status: :created, location: @quote }
+    end
   end
 
   # GET /quotes/1/edit
@@ -29,26 +47,16 @@ class QuotesController < ApplicationController
     @vehicle = Vehicle.find_by user_id: @user.id
     @quote.vehicle_id = @vehicle.id
 
-    @policy_feature = PolicyFeature.find_by vehicle_id: @vehicle.id
-    if (params[:amount].nil? && params[:quote_reference].nil?)
-      @quote.amount = Random.rand(2000-100)
-      @quote.quote_reference = "Quoteref-"+@user.id.to_s+"-"+@vehicle.id.to_s+"-"+Date.today.to_s+"-"+Random.rand(100-1).to_s
-
-      respond_to do |format|
-          format.json { render action: 'show', status: :created, location: @quote }
-      end
-    else
-
-      respond_to do |format|
-            if @quote.save
-              #format.html { redirect_to @driver_history, notice: 'Driver history was successfully created.' }
-              format.json { render action: 'show', status: :created, location: @quote }
-            else
-              #format.html { render action: 'new' }
-              format.json { render json: @quote.errors, status: :unprocessable_entity }
-            end
-      end
+    respond_to do |format|
+          if @quote.save
+            #format.html { redirect_to @driver_history, notice: 'Driver history was successfully created.' }
+            format.json { render action: 'show', status: :created, location: @quote }
+          else
+            #format.html { render action: 'new' }
+            format.json { render json: @quote.errors, status: :unprocessable_entity }
+          end
     end
+
   end
 
   # PATCH/PUT /quotes/1

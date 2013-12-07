@@ -1,4 +1,5 @@
 class Quote < ActiveRecord::Base
+  self.primary_key = 'quote_reference'
   belongs_to :vehicle
 
   validates_presence_of :quote_reference, :amount, :vehicle_id

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73d3f0af-24f3-4917-8637-799ced473349" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/address.rb" afterPath="$PROJECT_DIR$/app/models/address.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/driver_histories_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/driver_histories_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/incidents_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/incidents_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/personal_detail.rb" afterPath="$PROJECT_DIR$/app/models/personal_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/policy_feature.rb" afterPath="$PROJECT_DIR$/app/models/policy_feature.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/policy_features_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/policy_features_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/quote.rb" afterPath="$PROJECT_DIR$/app/models/quote.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/quotes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/quotes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/quotes/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/quotes/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/vehicle.rb" afterPath="$PROJECT_DIR$/app/models/vehicle.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/vehicles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/vehicles_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/quotes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/quotes/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InsuranceUnderwriter.iws" />
@@ -47,7 +38,7 @@
     <file path="/driver_history.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386349310199" ignored="false" />
     <file path="/vehicle.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386433748454" ignored="false" />
     <file path="/policy_feature.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386434725185" ignored="false" />
-    <file path="/quote.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384278446999" ignored="false" />
+    <file path="/quote.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386453106864" ignored="false" />
     <file path="/incident.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384358157000" ignored="false" />
     <file path="/person_test.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384365417372" ignored="false" />
     <file path="/incidents_controller_test.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384356243440" ignored="false" />
@@ -58,7 +49,7 @@
     <file path="/people_controller_test.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384363723578" ignored="false" />
     <file path="/vehicles_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386433281167" ignored="false" />
     <file path="/index.json.jbuilder" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386367343507" ignored="false" />
-    <file path="/show.html.erb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386367638910" ignored="false" />
+    <file path="/show.html.erb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386455506744" ignored="false" />
     <file path="/show.json.jbuilder" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386436973357" ignored="false" />
     <file path="/development.log" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384346543887" ignored="false" />
     <file path="/vehicles_controller_test.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384364977784" ignored="false" />
@@ -68,7 +59,7 @@
     <file path="/a.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384353421285" ignored="false" />
     <file path="/policy_features.yml" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384361451752" ignored="false" />
     <file path="/quotes.yml" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384361609829" ignored="false" />
-    <file path="/quotes_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386443360739" ignored="false" />
+    <file path="/quotes_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386456019484" ignored="false" />
     <file path="/quotes_controller_test.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384363808362" ignored="false" />
     <file path="/driver_histories.yml" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1384364303627" ignored="false" />
     <file path="/driver_histories_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386429212579" ignored="false" />
@@ -77,7 +68,7 @@
     <file path="/incidents_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386433107149" ignored="false" />
     <file path="/policy_features_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386433913638" ignored="false" />
     <file path="/application_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386362491544" ignored="false" />
-    <file path="/Dummy.txt" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386426398071" ignored="false" />
+    <file path="/Dummy.txt" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386444748106" ignored="false" />
     <file path="/user.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386364907918" ignored="false" />
     <file path="/20131205154831_create_people.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386348574734" ignored="false" />
     <file path="/users_controller.rb" changelist="73d3f0af-24f3-4917-8637-799ced473349" time="1386361238659" ignored="false" />
@@ -109,64 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="personal_detail.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/personal_detail.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="66" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="driver_histories_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/driver_histories_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="7" selection-start="693" selection-end="1107" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="incidents_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/incidents_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="4" selection-start="500" selection-end="660" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vehicles_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/vehicles_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="31" selection-start="510" selection-end="555" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="policy_features_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/policy_features_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="62" selection-start="593" selection-end="732" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="quotes_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/quotes_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="28" selection-start="906" selection-end="906" vertical-scroll-proportion="0.03773585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.json.jbuilder" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/quotes/show.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+            <state line="18" column="7" selection-start="553" selection-end="553" vertical-scroll-proportion="0.73239434">
               <folding />
             </state>
           </provider>
@@ -175,16 +112,7 @@
       <file leaf-file-name="quote.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/quote.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="policy_feature.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/policy_feature.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
+            <state line="2" column="19" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,8 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/vehicles/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/vehicles/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/PersonalDetails/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/personal_details/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
@@ -226,6 +152,8 @@
         <option value="$PROJECT_DIR$/app/models/policy_feature.rb" />
         <option value="$PROJECT_DIR$/app/controllers/policy_features_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/quotes/show.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/quotes/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/quote.rb" />
         <option value="$PROJECT_DIR$/app/controllers/quotes_controller.rb" />
       </list>
     </option>
@@ -752,7 +680,9 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
@@ -803,28 +733,32 @@
       <created>1386367992389</created>
       <updated>1386367992389</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Quote retrieval and saving now working, all forms working, one after another, refactoring of file locations.">
+      <created>1386444752098</created>
+      <updated>1386444752098</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19242424" sideWeight="0.6218058" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16065574" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19242424" sideWeight="0.408547" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44615385" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25245902" sideWeight="0.42651516" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3781942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.591453" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39954597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16065574" sideWeight="0.57348484" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -873,7 +807,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Password encryption done and personal details table has user id populated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quote retrieval and saving now working, all forms working, one after another, refactoring of file locations." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -891,20 +825,14 @@
     <MESSAGE value="Users controller updated to generate values for uuid field" />
     <MESSAGE value="Started password encryption stuff" />
     <MESSAGE value="Password encryption done and personal details table has user id populated" />
+    <MESSAGE value="Quote retrieval and saving now working, all forms working, one after another, refactoring of file locations." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/vehicles/show.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vehicles/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -975,9 +903,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/quotes/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/personal_detail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="66" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+        <state line="6" column="54" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -989,23 +924,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/quote.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/quotes/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+        <state line="3" column="20" selection-start="58" selection-end="58" vertical-scroll-proportion="0.18085106">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/quotes/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/quote.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="2" column="19" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/quotes_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="906" selection-end="906" vertical-scroll-proportion="0.03773585">
+        <state line="18" column="7" selection-start="553" selection-end="553" vertical-scroll-proportion="0.73239434">
           <folding />
         </state>
       </provider>

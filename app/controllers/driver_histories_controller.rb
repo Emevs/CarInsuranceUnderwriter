@@ -25,6 +25,8 @@ class DriverHistoriesController < ApplicationController
   # POST /driver_histories.json
   def create
     @driver_history = DriverHistory.new(driver_history_params)
+    @user = User.find_by uuid: params[:uuid]
+    @driver_history.user_id = @user.id
 
     respond_to do |format|
       if @driver_history.save
@@ -69,6 +71,6 @@ class DriverHistoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def driver_history_params
-      params.require(:driver_history).permit(:number_of_incidents, :person_id)
+      params.permit(:number_of_incidents, :user_id)
     end
 end

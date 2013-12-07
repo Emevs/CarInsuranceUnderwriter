@@ -2,8 +2,13 @@ class PersonalDetail < ActiveRecord::Base
   belongs_to :user
 
 
-  # Constants for validation
+  # Constants for validation, ideally these would be in a config file or stored in the database to send to the broker.
   LICENSE_TYPES = ['full', 'provisional']
+  # Basic lists, in reality there would be a lot more.
+  TITLES = ['Mrs', 'Mr', 'Miss', 'Dr', 'Other']
+  OCCUPATIONS = ['Doctor', 'Nurse', 'Vet', 'Builder', 'Plumber', 'Student', 'Teacher' , 'Lecturer', 'None', 'Other']
+
+
 
   # Force the user to enter certain details.
   validates_presence_of(:forenames, :surname, :date_of_birth, :email, :title, :license_type, :license_period, :telephone_number, :occupation, :user_id)
@@ -22,6 +27,10 @@ class PersonalDetail < ActiveRecord::Base
 
   # Ensure the license type is one of these values.
   validates_inclusion_of(:license_type, :in => LICENSE_TYPES)
+
+  validates_inclusion_of(:title, :in => TITLES)
+
+  validates_inclusion_of(:occupation, :in => OCCUPATIONS)
 
   def forenames=(value)
     write_attribute :forenames, (value ? value.humanize : nil)

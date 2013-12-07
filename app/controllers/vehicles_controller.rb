@@ -25,6 +25,8 @@ class VehiclesController < ApplicationController
   # POST /vehicles.json
   def create
     @vehicle = Vehicle.new(vehicle_params)
+    @user = User.find_by uuid: params[:uuid]
+    @vehicle.user_id = @user.id
 
     respond_to do |format|
       if @vehicle.save
@@ -69,6 +71,6 @@ class VehiclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_params
-      params.require(:vehicle).permit(:vehicle_registration, :annual_mileage, :estimated_value, :parking_location, :policy_start_date, :person_id)
+      params.permit(:vehicle_registration, :annual_mileage, :estimated_value, :parking_location, :policy_start_date, :user_id)
     end
 end

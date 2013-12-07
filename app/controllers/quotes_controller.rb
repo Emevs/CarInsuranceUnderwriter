@@ -25,14 +25,28 @@ class QuotesController < ApplicationController
   # POST /quotes.json
   def create
     @quote = Quote.new(quote_params)
+    @user = User.find_by uuid: params[:uuid]
+    @vehicle = Vehicle.find_by user_id: @user.id
+    @quote.vehicle_id = @vehicle.id
 
-    respond_to do |format|
-      if @quote.save
-        #format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @quote }
-      else
-        #format.html { render action: 'new' }
-        format.json { render json: @quote.errors, status: :unprocessable_entity }
+    @policy_feature = PolicyFeature.find_by vehicle_id: @vehicle.id
+    if (params[:amount].nil? && params[:quote_reference].nil?)
+      @quote.amount = Random.rand(2000-100)
+      @quote.quote_reference = "Quoteref-"+@user.id.to_s+"-"+@vehicle.id.to_s+"-"+Date.today.to_s+"-"+Random.rand(100-1).to_s
+
+      respond_to do |format|
+          format.json { render action: 'show', status: :created, location: @quote }
+      end
+    else
+
+      respond_to do |format|
+            if @quote.save
+              #format.html { redirect_to @driver_history, notice: 'Driver history was successfully created.' }
+              format.json { render action: 'show', status: :created, location: @quote }
+            else
+              #format.html { render action: 'new' }
+              format.json { render json: @quote.errors, status: :unprocessable_entity }
+            end
       end
     end
   end
@@ -69,6 +83,6 @@ class QuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
-      params.require(:quote).permit(:quote_reference, :amount, :vehicle_id)
+      params.permit(:quote_reference, :amount, :vehicle_id)
     end
 end

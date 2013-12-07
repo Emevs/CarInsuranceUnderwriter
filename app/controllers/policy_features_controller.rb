@@ -25,6 +25,10 @@ class PolicyFeaturesController < ApplicationController
   # POST /policy_features.json
   def create
     @policy_feature = PolicyFeature.new(policy_feature_params)
+    @user = User.find_by uuid: params[:uuid]
+    @vehicle = Vehicle.find_by user_id: @user.id
+    @policy_feature.vehicle_id = @vehicle.id
+
 
     respond_to do |format|
       if @policy_feature.save
@@ -69,6 +73,6 @@ class PolicyFeaturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def policy_feature_params
-      params.require(:policy_feature).permit(:vehicle_id, :policy_excess, :breakdown_cover, :windscreen_repair, :windscreen_excess)
+      params.permit(:vehicle_id, :policy_excess, :breakdown_cover, :windscreen_repair, :windscreen_excess)
     end
 end

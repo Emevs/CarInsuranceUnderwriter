@@ -6,5 +6,5 @@ class PolicyFeature < ActiveRecord::Base
   validates_presence_of :policy_excess, :breakdown_cover, :windscreen_repair, :vehicle_id
 
   validates_inclusion_of :breakdown_cover, :in => COVER_TYPE
-  validates_inclusion_of :windscreen_repair, :in => ['Y', 'y', 'N', 'n']
+  validates_inclusion_of :windscreen_repair, :in => ['Yes', 'No']
 end

@@ -25,7 +25,7 @@ class PersonalDetailsController < ApplicationController
   # POST /personal_details.json
   def create
     @personal_detail = PersonalDetail.new(personal_detail_params)
-    #@personal_detail.user_id = User.find_by(:uuid, personal_detail_params[:uuid]).user_id
+
     @user = User.find_by uuid: params[:uuid]
     @personal_detail.user_id = @user.id
     respond_to do |format|

@@ -25,7 +25,9 @@ class IncidentsController < ApplicationController
   # POST /incidents.json
   def create
     @incident = Incident.new(incident_params)
-
+    @user = User.find_by uuid: params[:uuid]
+    @driver_history = DriverHistory.find_by user_id: @user.id
+    @incident.driver_history_id = @driver_history.id
     respond_to do |format|
       if @incident.save
         #format.html { redirect_to @incident, notice: 'Incident was successfully created.' }
@@ -69,6 +71,6 @@ class IncidentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def incident_params
-      params.require(:incident).permit(:driver_history_id, :date_of_incident, :claim_value, :incident_type, :description)
+      params.permit(:driver_history_id, :date_of_incident, :claim_value, :incident_type, :description)
     end
 end

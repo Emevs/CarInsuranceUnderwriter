@@ -1,6 +1,6 @@
 class PolicyFeaturesController < ApplicationController
   before_action :set_policy_feature, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :verify_authenticity_token
   # GET /policy_features
   # GET /policy_features.json
   def index

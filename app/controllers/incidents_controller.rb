@@ -1,6 +1,6 @@
 class IncidentsController < ApplicationController
   before_action :set_incident, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :verify_authenticity_token
   # GET /incidents
   # GET /incidents.json
   def index

@@ -1,6 +1,6 @@
 class PersonalDetailsController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :verify_authenticity_token
   # GET /personal_details
   # GET /personal_details.json
   def index

@@ -1,6 +1,6 @@
 class DriverHistoriesController < ApplicationController
   before_action :set_driver_history, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :verify_authenticity_token
   # GET /driver_histories
   # GET /driver_histories.json
   def index

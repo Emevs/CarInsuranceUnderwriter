@@ -1,8 +1,7 @@
 require 'bcrypt'
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /users
+  skip_before_filter :verify_authenticity_token
   # GET /users.json
   def index
     @users = User.all
@@ -36,6 +35,16 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  # GET /users/login
+  def login
+    @user = User.find_by username: params[:username]
+    if !@user.nil? && @user.password == BCrypt::Password.create(params[:password], :cost =>5)
+      # Reset user to null, so nothing is returned to the broker, which will then handle error messages.
+      @user = '';
+    end
+
   end
 
   # PATCH/PUT /users/1

@@ -1,4 +1,5 @@
 InsuranceUnderwriter::Application.routes.draw do
+  get 'users/login', to: 'users#login'
   resources :users
 
   resources :quotes
